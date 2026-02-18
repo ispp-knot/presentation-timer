@@ -464,28 +464,31 @@ select {
 }
 
 .current-section-name {
-    font-size: 1.75rem;
+    font-size: 5rem;
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.02em;
+    line-height: 1.1;
+    text-align: center;
 }
 
 .current-presenter {
-    font-size: 1.1rem;
+    font-size: 2.5rem;
     font-weight: 500;
     color: var(--accent);
+    margin-top: 12px;
 }
 
 /* Timer display */
 .timer-display {
     font-family: var(--font-mono);
-    font-size: 10rem;
+    font-size: 12rem;
     font-weight: 700;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     line-height: 1;
     color: var(--text-primary);
     transition: color 300ms ease;
-    padding: 24px 0;
+    padding: 10px 0;
 }
 
 .timer-display.overtime {
@@ -513,21 +516,22 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 1.5rem;
 }
 
 .next-info .next-label {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    font-size: 0.75rem;
+    font-size: 1.5rem;
 }
 
 .next-info .next-value {
     font-weight: 500;
     color: var(--text-secondary);
+    font-size: 2.2rem;
 }
 
 /* Elapsed / Remaining row */
@@ -549,7 +553,7 @@ select {
 }
 
 .total-remaining .total-label {
-    font-size: 0.75rem;
+    font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -558,7 +562,7 @@ select {
 
 .total-remaining .total-value {
     font-family: var(--font-mono);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: var(--text-secondary);
 }
@@ -572,7 +576,7 @@ select {
 }
 
 .elapsed-range {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--text-muted);
 }
@@ -595,7 +599,7 @@ select {
 }
 
 .diff-value {
-    font-size: 1.6rem !important;
+    font-size: 3.5rem !important;
 }
 
 /* Progress bar */
@@ -758,7 +762,11 @@ select {
     }
 
     .timer-display {
-        font-size: 6rem;
+        font-size: 8rem;
+    }
+
+    .current-section-name {
+        font-size: 2.5rem;
     }
 
     .presentation-view {

@@ -130,8 +130,24 @@ export default function PresentationView({
 
     const isAhead = scheduleDiff >= 0;
 
+    const handleContainerClick = useCallback((e) => {
+        // Ignore clicks on buttons or interactive elements
+        if (e.target.closest('button') || e.target.closest('input') || e.target.closest('a')) {
+            return;
+        }
+
+        const { clientX } = e;
+        const { innerWidth } = window;
+
+        if (clientX > innerWidth / 2) {
+            onNext();
+        } else {
+            onPrev();
+        }
+    }, [onNext, onPrev]);
+
     return (
-        <div className="presentation-view">
+        <div className="presentation-view" onClick={handleContainerClick}>
             <span className="section-counter">
                 SECCIÓN {currentIndex + 1} / {total}
             </span>
