@@ -41,6 +41,7 @@ export default function PresentationView({
     onPlayPause,
     onPrev,
     onNext,
+    onReset,
     minTime,
     maxTime,
 }) {
@@ -146,6 +147,8 @@ export default function PresentationView({
         }
     }, [onNext, onPrev]);
 
+    const isLast = currentIndex === sections.length - 1;
+
     return (
         <div className="presentation-view" onClick={handleContainerClick}>
             <span className="section-counter">
@@ -199,8 +202,10 @@ export default function PresentationView({
                 onPlayPause={onPlayPause}
                 onPrev={onPrev}
                 onNext={onNext}
+                onReset={onReset}
                 canPrev={currentIndex > 0}
                 canNext={currentIndex < total - 1}
+                isLast={isLast}
             />
         </div>
     );
