@@ -2,6 +2,8 @@
 
 Temporizador profesional para presentaciones en tiempo real, sin backend, pensado para eventos con tiempos muy ajustados.
 
+Disponible en [https://ispp-knot.github.io/presentation-timer/](https://ispp-knot.github.io/presentation-timer/)
+
 ## Características
 
 - **Modo Configuración**: define presentadores, secciones (con minutos y segundos), rango de tiempo mínimo/máximo y reordena arrastrando
@@ -37,6 +39,13 @@ Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
 ```bash
 npm run build
 npm run preview
+```
+
+### Despliegue
+
+```bash
+npm run build
+npm run deploy
 ```
 
 ## Estructura del proyecto
